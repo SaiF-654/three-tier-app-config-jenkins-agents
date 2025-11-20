@@ -4,7 +4,7 @@ services:
   backend:
     image: ${BACKEND_IMAGE}
     ports:
-      - "5000:5000"
+      - "5002:5000"
     depends_on:
       - mongo
     env_file:
@@ -23,7 +23,7 @@ services:
   frontend:
     image: ${FRONTEND_IMAGE}
     ports:
-      - "3000:3000"
+      - "3002:3000"
     depends_on:
       - backend
     env_file:
